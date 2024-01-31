@@ -11,4 +11,4 @@ subprocess.run(["python", "8-compare_with_others.py"])
 
 #Sadece bu dosyayı çalıştırın.
 
-#B
+#untreu
