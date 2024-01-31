@@ -26,7 +26,7 @@ if q.lower() == "evet":
 
         with open('finals.txt', 'r') as file:
             content = file.read()
-            words = content.split()  # Kelimeleri ayır
+            words = content.split()
 
         with open('finals.txt', 'w') as file:
             for word in words:
