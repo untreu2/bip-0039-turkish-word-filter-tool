@@ -3,6 +3,9 @@ def different_letters(word1, word2):
     return diff_count >= 2
 
 def filter_words(word_list):
+    if not word_list:
+        return []  
+    
     new_list = [word_list[0]]
     
     for word in word_list[1:]:
