@@ -10,5 +10,3 @@ subprocess.run(["python", "7-no_capital.py"])
 subprocess.run(["python", "8-compare_with_others.py"])
 
 #Sadece bu dosyayı çalıştırın.
-
-#jokies
