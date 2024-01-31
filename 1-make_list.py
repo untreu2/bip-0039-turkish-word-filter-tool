@@ -24,11 +24,11 @@ if q.lower() == "evet":
         except KeyboardInterrupt:
             print("\nIPTAL.")
 
-        with open('finals.txt', 'r') as file:
+        with open('finals.txt', 'r', encoding='utf-8') as file:
             content = file.read()
-            words = content.split()
+            words = content.split() 
 
-        with open('finals.txt', 'w') as file:
+        with open('finals.txt', 'w', encoding='utf-8') as file:  
             for word in words:
                 file.write(word + '\n')
 
