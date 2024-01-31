@@ -26,7 +26,7 @@ if q.lower() == "evet":
 
         with open('finals.txt', 'r') as file:
             content = file.read()
-            words = content.split()
+            words = content.split()  # Kelimeleri ayır
 
         with open('finals.txt', 'w') as file:
             for word in words:
@@ -35,9 +35,10 @@ if q.lower() == "evet":
 elif q.lower() == "hayır":
     article = input("Türkçe dilinde herhangi bir yazı girin...")
     lower_article = article.lower()
-    
     with open("finals.txt", "w", encoding="utf-8") as file:
         for line in lower_article.split('\n'):
-            file.write(line + "\n")
+            words = line.split()
+            for word in words:
+                file.write(word + "\n")
 
     print("Okay!")
