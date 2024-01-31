@@ -1,9 +1,14 @@
-filename = 'finals.txt'
-
-with open(filename, 'r', encoding='utf-8') as file:
+with open("finals.txt", "r", encoding="utf-8") as file:
     lines = file.readlines()
 
-filtered_lines = [line for line in lines if len(line) < 4 or len(set(line[:4])) > 1]
+unique_lines = []
+seen_prefixes = set()
 
-with open(filename, 'w', encoding='utf-8') as file:
-    file.writelines(filtered_lines)
+for line in lines:
+    prefix = line[:4]
+    if prefix not in seen_prefixes:
+        unique_lines.append(line)
+        seen_prefixes.add(prefix)
+
+with open("finals.txt", "w") as file:
+    file.writelines(unique_lines)
