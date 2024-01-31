@@ -23,7 +23,9 @@ for word in words:
     "di", "ti", "dı", "tı",
     "de", "da", "te", "ta",
     "den", "dan", "ten", "tan","erek","arak", "im","ım","üm,","in","ın","un","ün","i","ı","u","ü",
-    "imiz","ımız","umuz","ümüz","iniz","ınız","unuz","ünüz","an","en","le","la","dum","dim","din","dün","dan","den","de","da")):
+    "imiz","ımız","umuz","ümüz","iniz","ınız","unuz","ünüz","an","en","le","la","dum","dim","din","dün","dan","den","de","da",
+    "ya","ye","yü","yu","ip","ıp","up","üp","ler","lar","lere","lara","leri","ecek","acak","yor","ine","ına","una","üne","mize","mıza","nıza","nize",
+    "mez","maz","müz","muz","rum","rim","rüm","rım","mem","mam")):
         cleaned_words.append(word)
 
 with open("finals.txt", "w", encoding="utf-8") as file:
