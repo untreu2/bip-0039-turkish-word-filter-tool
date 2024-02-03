@@ -25,7 +25,7 @@ for word in words:
     "den", "dan", "ten", "tan","erek","arak", "im","ım","üm,","in","ın","un","ün","i","ı","u","ü",
     "imiz","ımız","umuz","ümüz","iniz","ınız","unuz","ünüz","an","en","le","la","dum","dim","din","dün","dan","den","de","da",
     "ya","ye","yü","yu","ip","ıp","up","üp","ler","lar","lere","lara","leri","ecek","acak","yor","ine","ına","una","üne","mize","mıza","nıza","nize",
-    "mez","maz","müz","muz","rum","rim","rüm","rım","mem","mam")):
+    "mez","maz","müz","muz","rum","rim","rüm","rım","mem","mam","um")):
         cleaned_words.append(word)
 
 with open("finals.txt", "w", encoding="utf-8") as file:
