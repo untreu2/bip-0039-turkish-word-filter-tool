@@ -7,7 +7,7 @@ def clean_and_overwrite_file(file_path):
     cleaned_lines = []
 
     for line in lines:
-        if re.search('[^a-zA-Z\s]', line) or any(char in line for char in ['x', 'w', 'q']):
+        if re.search(r'[^a-zA-Z\s]', line) or any(char in line for char in ['x', 'w', 'q']):
             continue
         cleaned_lines.append(line)
 
