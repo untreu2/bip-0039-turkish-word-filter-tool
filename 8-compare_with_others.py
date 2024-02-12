@@ -1,15 +1,17 @@
-finals_file_path = "finals.txt"
-allseed_file_path = "allseed.txt"
+with open('finals.txt', 'r') as finals:
+    finals_lines = finals.readlines()
 
-with open(finals_file_path, "r", encoding="utf-8") as finals_file:
-    finals_lines = finals_file.readlines()
+with open('allseed.txt', 'r') as allseed:
+    allseed_lines = allseed.readlines()
 
-with open(allseed_file_path, "r", encoding="utf-8") as allseed_file:
-    allseed_lines = allseed_file.readlines()
+match = set(line[:4] for line in finals_lines).intersection(line[:4] for line in allseed_lines)
 
-filtered_finals_lines = [line for line in finals_lines if not any(line.startswith(seed[:3]) for seed in allseed_lines)]
+filtered = []
+for line in finals_lines:
+    if line[:4] not in match and line not in allseed_lines:
+        filtered.append(line)
 
-with open(finals_file_path, "w", encoding="utf-8") as updated_finals_file:
-    updated_finals_file.writelines(filtered_finals_lines)
-
+with open('finals.txt', 'w') as finals:
+    finals.writelines(filtered)
+    
 print("Process completed.")
