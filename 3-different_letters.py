@@ -1,6 +1,6 @@
 def different_letters(word1, word2):
     diff_count = sum(a != b for a, b in zip(word1, word2))
-    return diff_count >= 2
+    return diff_count >= 1
 
 def filter_words(word_list):
     if not word_list:
