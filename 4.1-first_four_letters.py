@@ -5,7 +5,7 @@ unique_lines = []
 seen_prefixes = set()
 
 for line in lines:
-    prefix = line[:3]
+    prefix = line[:4]
     if prefix not in seen_prefixes:
         unique_lines.append(line)
         seen_prefixes.add(prefix)
