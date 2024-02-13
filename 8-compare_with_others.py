@@ -32,3 +32,5 @@ for line in finals_lines:
 
 with open('finals.txt', 'w') as finals_file:
     finals_file.write('\n'.join(newf))
+
+print("Keep it cool!")
