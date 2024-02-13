@@ -9,7 +9,7 @@ if q.lower() == "evet":
             with open(output_file, 'w', encoding='utf-8') as output_file:
                 output_file.write(content)
 
-            print(f"İçerik kopyalandı.")
+            print(f"What a crossover from Allen Iverson!")
 
         except FileNotFoundError:
             print("Dosya bulunamadı.")
