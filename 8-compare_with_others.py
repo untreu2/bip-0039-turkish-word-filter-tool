@@ -1,4 +1,4 @@
-with open("finals.txt", "r", encoding="utf-8") as file:
+with open("finals.txt", "r", encoding="utf-8") as finals:
     finals_lines = finals.readlines()
 
 with open('allseed.txt', 'r', encoding="utf-8") as allseed:
