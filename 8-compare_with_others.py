@@ -30,7 +30,20 @@ for line in finals_lines:
     if keep_line:
         newf.append(line)
 
-with open('finals.txt', 'w') as finals_file:
+with open('finals.txt', 'r', encoding='utf-8') as finals_file:
+    finals_lines = finals_file.readlines()
+
+with open('allseed.txt', 'r', encoding='utf-8') as allseed_file:
+    allseed_lines = allseed_file.readlines()
+
+allseed_set = set(line.strip() for line in allseed_lines)
+
+newf = []
+for line in finals_lines:
+    if line.strip() not in allseed_set:
+        newf.append(line.strip())
+
+with open('finals.txt', 'w', encoding='utf-8') as finals_file:
     finals_file.write('\n'.join(newf))
 
 print("Keep it cool!")
